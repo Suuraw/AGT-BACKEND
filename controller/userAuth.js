@@ -57,7 +57,7 @@ export const forgotPassword=async(req,res)=>{
             return res.send({Status: "User not existed"})
         } 
         const token = jwt.sign({id: user._id}, JWT_SECRET, {expiresIn: "1d"})
-        const resetLink = `http://localhost:5173/reset-password?token=${token}`;
+        const resetLink = `https://11c70907.reset-password-page.pages.dev/reset-password?token=${token}`;
         var transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {

@@ -22,10 +22,8 @@ const postSchema = new mongoose.Schema(
       required: true,
       trim: true,
     },
-
   },
-  { timestamps: true } 
+  { timestamps: true }
 );
-
 
 export const Post = mongoose.model("Post", postSchema);
